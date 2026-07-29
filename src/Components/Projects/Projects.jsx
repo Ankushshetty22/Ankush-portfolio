@@ -3,6 +3,8 @@ import Weatherapp from "../../assets/Weatherapp.png";
 import picture from "../../assets/picture.webp";
 import Todo from "../../assets/Todo.png";
 import social from "../../assets/social.avif";
+import passman from "../../assets/passman.webp";
+import chatbox from "../../assets/chatbox.webp";
 
 function Projects() {
   const projects = [
@@ -43,6 +45,26 @@ function Projects() {
       description:
         "A real-time communication platform connecting users across different locations.",
       technologies: ["React", "API"],
+      live: "#",
+      github: "#",
+    },
+    {
+    id: 5,
+      title: "Password manager",
+      image: passman,
+      description:
+        "A password manager is a secure software tool used to store, generate, and manage digital credentials inside an encrypted vault..",
+      technologies: ["React", "CSS"],
+      live: "#",
+      github: "#",
+    },
+    {
+    id: 6,
+      title: "Basic chat box",
+      image: chatbox,
+      description:
+        "A conversational application capable of handling basic user interactions and responses.",
+      technologies: ["React", "Javascript"],
       live: "#",
       github: "#",
     },
