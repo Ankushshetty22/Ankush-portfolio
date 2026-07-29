@@ -1,7 +1,8 @@
 import "./Projects.css";
 import Weatherapp from "../../assets/Weatherapp.png";
 import picture from "../../assets/picture.webp";
-import Todo from "../../assets/Todo.png"
+import Todo from "../../assets/Todo.png";
+import social from "../../assets/social.avif";
 
 function Projects() {
   const projects = [
@@ -32,6 +33,16 @@ function Projects() {
       description:
         "A simple task management application with add, edit, delete, and search features.",
       technologies: ["React", "Local Storage"],
+      live: "#",
+      github: "#",
+    },
+    {
+      id: 4,
+      title: "Social media app",
+      image: social,
+      description:
+        "A real-time communication platform connecting users across different locations.",
+      technologies: ["React", "API"],
       live: "#",
       github: "#",
     },

@@ -1,111 +1,191 @@
-/* About Section */
+/* ===========================
+   ABOUT SECTION
+=========================== */
 
 .about {
-    padding: 100px 10%;
-    background: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 10%;
+  background: linear-gradient(135deg, #f8fbff, #eaf4ff);
+  transition: all 0.4s ease;
 }
 
 .about-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
 }
 
-/* Image */
+/* ===========================
+   IMAGE
+=========================== */
 
 .about-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .about-image img {
-    width: 350px;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 5px solid #2563eb;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease;
 }
 
-/* Content */
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+/* ===========================
+   CONTENT
+=========================== */
 
 .about-content {
-    flex: 1;
+  flex: 1;
 }
 
 .about-content h2 {
-    font-size: 2.5rem;
-    color: #2563eb;
-    margin-bottom: 20px;
+  font-size: 2.8rem;
+  color: #2563eb;
+  margin-bottom: 20px;
 }
 
 .about-content p {
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.8;
-    margin-bottom: 18px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 18px;
 }
 
-/* Button */
+.about-content strong {
+  color: #2563eb;
+}
 
 .about-btn {
-    display: inline-block;
-    margin-top: 20px;
-    text-decoration: none;
-    background: #2563eb;
-    color: white;
-    padding: 14px 28px;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: 0.3s ease;
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 30px;
+  text-decoration: none;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s ease;
 }
 
 .about-btn:hover {
-    background: #1d4ed8;
-    transform: translateY(-3px);
+  background: #1d4ed8;
+  transform: translateY(-3px);
+}
+/* ===========================
+   LIGHT MODE
+=========================== */
+
+.about {
+  min-height: 100vh;
+  padding: 80px 10%;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #f8fbff, lightgreen);
+  transition: background 0.4s ease, color 0.4s ease;
 }
 
-/* Responsive */
+/* ===========================
+   DARK MODE
+=========================== */
 
-@media (max-width: 900px) {
-
-    .about-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-image img {
-        width: 280px;
-        height: 280px;
-    }
-
-    .about-content h2 {
-        font-size: 2rem;
-    }
-
-    .about-content p {
-        font-size: 1rem;
-    }
+body.dark-mode .about {
+  background: linear-gradient(135deg, #0f172a, #1e293b, #111827);
 }
 
-@media (max-width: 500px) {
+/* ===========================
+   DARK MODE
+=========================== */
 
-    .about {
-        padding: 70px 20px;
-    }
+body.dark-mode .about {
+  background: linear-gradient(135deg, #0f172a, #1e293b, #111827);
+}
 
-    .about-image img {
-        width: 220px;
-        height: 220px;
-    }
+body.dark-mode .about-content h2 {
+  color: #60a5fa;
+}
 
-    .about-content h2 {
-        font-size: 1.8rem;
-    }
+body.dark-mode .about-content p {
+  color: #d1d5db;
+}
 
-    .about-btn {
-        width: 100%;
-        text-align: center;
-    }
+body.dark-mode .about-content strong {
+  color: #60a5fa;
+}
+
+body.dark-mode .about-image img {
+  border-color: #60a5fa;
+  box-shadow: 0 12px 30px rgba(96, 165, 250, 0.25);
+}
+
+body.dark-mode .about-btn {
+  background: #3b82f6;
+  color: white;
+}
+
+body.dark-mode .about-btn:hover {
+  background: #2563eb;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 992px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 280px;
+    height: 280px;
+  }
+
+  .about-content h2 {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 60px 8%;
+  }
+
+  .about-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+
+  .about-image img {
+    width: 240px;
+    height: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-image img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .about-content h2 {
+    font-size: 2rem;
+  }
 }

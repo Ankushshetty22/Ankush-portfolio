@@ -1,152 +1,181 @@
-/* Hero Section */
-
 .hero {
-    min-height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 80px 10%;
-    background: linear-gradient(135deg, #f5f7fa, #e4ecff);
-    gap: 60px;
-}
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 10%;
+  transition: 0.4s;
+  background-color: lightblue;
+} 
 
-/* Left Content */
+
 
 .hero-content {
-    flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
 }
 
-.hero-content h1 {
-    font-size: 3.2rem;
-    color: #222;
-    margin-bottom: 15px;
+.hero-text {
+  flex: 1;
 }
 
-.hero-content h1 span {
-    color: #2563eb;
+.hero-text h3 {
+  font-size: 1.4rem;
+  color: #555;
 }
 
-.hero-content h2 {
-    font-size: 2rem;
-    color: #555;
-    margin-bottom: 20px;
+.hero-text h1 {
+  font-size: 3.8rem;
+  color: #405d84;
+  margin: 10px 0;
 }
 
-.hero-content p {
-    font-size: 1.1rem;
-    color: #666;
-    line-height: 1.8;
-    max-width: 600px;
-    margin-bottom: 35px;
+.hero-text h2 {
+  font-size: 2rem;
+  color: #444;
+  margin-bottom: 20px;
 }
 
-/* Buttons */
+.hero-text p {
+  max-width: 550px;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 30px;
+}
 
 .hero-buttons {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .btn {
-    text-decoration: none;
-    padding: 14px 30px;
-    border-radius: 8px;
-    font-size: 17px;
-    font-weight: 600;
-    transition: 0.3s ease;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
 .primary-btn {
-    background: #2563eb;
-    color: white;
+  background: #1d5e86;
+  color: white;
 }
 
 .primary-btn:hover {
-    background: #1d4ed8;
-    transform: translateY(-3px);
+  background: #1d4ed8;
 }
 
 .secondary-btn {
-    border: 2px solid #2563eb;
-    color: #2563eb;
+  border: 2px solid #2563eb;
+  color: #2563eb;
 }
 
 .secondary-btn:hover {
-    background: #2563eb;
-    color: white;
-    transform: translateY(-3px);
+  background: #2563eb;
+  color: white;
 }
 
-/* Right Image */
-
 .hero-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .hero-image img {
-    width: 350px;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 6px solid #2563eb;
-    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid #2563eb;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+/* ===========================
+   HERO SECTION
+=========================== */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 10%;
+  background: linear-gradient(135deg, #f8fbff, lightblue);
+  transition: all 0.4s ease;
 }
 
-/* Responsive */
+/* ===========================
+   DARK MODE
+=========================== */
 
-@media (max-width: 900px) {
-    .hero {
-        flex-direction: column-reverse;
-        text-align: center;
-        padding: 60px 20px;
-    }
+body.dark-mode .hero {
+  background: linear-gradient(135deg, #adaeac, #6a7678, #6d798b);
+}
+/* ===========================
+   DARK MODE
+=========================== */
 
-    .hero-content p {
-        margin: auto;
-        margin-bottom: 30px;
-    }
-
-    .hero-buttons {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .hero-image img {
-        width: 280px;
-        height: 280px;
-    }
-
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-content h2 {
-        font-size: 1.6rem;
-    }
+body.dark-mode .hero-text h3 {
+  color: #cbd5e1;
 }
 
-@media (max-width: 500px) {
-    .hero-content h1 {
-        font-size: 2rem;
-    }
+body.dark-mode .hero-text h1 {
+  color: #60a5fa;
+}
 
-    .hero-content h2 {
-        font-size: 1.3rem;
-    }
+body.dark-mode .hero-text h2 {
+  color: #f1f5f9;
+}
 
-    .hero-content p {
-        font-size: 1rem;
-    }
+body.dark-mode .hero-text p {
+  color: #cbd5e1;
+}
 
-    .btn {
-        width: 100%;
-        text-align: center;
-    }
+body.dark-mode .secondary-btn {
+  border-color: #60a5fa;
+  color: #60a5fa;
+}
 
-    .hero-image img {
-        width: 220px;
-        height: 220px;
-    }
+body.dark-mode .secondary-btn:hover {
+  background: #60a5fa;
+  color: #111827;
+}
+
+body.dark-mode .hero-image img {
+  border-color: #60a5fa;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 60px 8%;
+    text-align: center;
+  }
+
+  .hero-content {
+    flex-direction: column-reverse;
+  }
+
+  .hero-text h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-image img {
+    width: 250px;
+    height: 250px;
+  }
 }

@@ -1,148 +1,271 @@
-/* Projects Section */
+/* ===========================
+   PROJECTS SECTION
+=========================== */
 
 .projects {
-    padding: 100px 10%;
-    background: #ffffff;
+  min-height: 100vh;
+  padding: 80px 10%;
+  background: linear-gradient(135deg, #f8fbff, rgb(11, 119, 154));
+  transition: background 0.4s ease, color 0.4s ease;
 }
 
 .projects-container {
-    max-width: 1200px;
-    margin: auto;
+  max-width: 1200px;
+  margin: auto;
 }
 
+/* Heading */
+
 .projects h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    color: #2563eb;
-    margin-bottom: 15px;
+  text-align: center;
+  font-size: 2.8rem;
+  color: #2563eb;
+  margin-bottom: 15px;
 }
 
 .projects-subtitle {
-    text-align: center;
-    color: #666;
-    font-size: 1.1rem;
-    margin-bottom: 50px;
+  text-align: center;
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+  line-height: 1.7;
 }
 
-/* Grid */
+
+/* ===========================
+   PROJECT GRID
+=========================== */
 
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-    gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
 }
 
-/* Card */
+
+/* ===========================
+   PROJECT CARD
+=========================== */
 
 .project-card {
-    background: #fff;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    transition: 0.3s ease;
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(37,99,235,0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(37,99,235,0.2);
 }
 
-/* Image */
+
+/* ===========================
+   PROJECT IMAGE
+=========================== */
 
 .project-image {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
 }
 
-/* Content */
+
+/* ===========================
+   PROJECT CONTENT
+=========================== */
 
 .project-content {
-    padding: 20px;
+  padding: 25px;
 }
 
 .project-content h3 {
-    color: #2563eb;
-    margin-bottom: 12px;
+  font-size: 1.5rem;
+  color: #2563eb;
+  margin-bottom: 12px;
 }
 
 .project-content p {
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 18px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 18px;
 }
 
-/* Tags */
+
+/* ===========================
+   TECHNOLOGY TAGS
+=========================== */
 
 .project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 .tag {
-    background: #2563eb;
-    color: white;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 14px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: #dbeafe;
+  color: #2563eb;
+  font-size: 0.85rem;
+  font-weight: 600;
 }
 
-/* Buttons */
+
+/* ===========================
+   BUTTONS
+=========================== */
 
 .project-buttons {
-    display: flex;
-    gap: 15px;
+  display: flex;
+  gap: 15px;
 }
 
-.live-btn,
-.github-btn {
-    flex: 1;
-    text-align: center;
-    padding: 12px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
+.project-buttons a {
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
 }
+
 
 .live-btn {
-    background: #2563eb;
-    color: white;
+  background: #2563eb;
+  color: white;
 }
 
 .live-btn:hover {
-    background: #1d4ed8;
+  background: #1d4ed8;
 }
 
+
 .github-btn {
-    border: 2px solid #2563eb;
-    color: #2563eb;
+  border: 2px solid #2563eb;
+  color: #2563eb;
 }
 
 .github-btn:hover {
-    background: #2563eb;
-    color: white;
+  background: #2563eb;
+  color: white;
 }
 
-/* Responsive */
 
-@media (max-width: 768px) {
+/* ===========================
+   DARK MODE
+=========================== */
 
-    .projects {
-        padding: 80px 20px;
-    }
+body.dark-mode .projects {
 
-    .projects h2 {
-        font-size: 2rem;
-    }
+  /* Different from About and Skills */
+  background: linear-gradient(135deg,  #0f172a, #1e293b, #111827);
+}
 
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
 
-    .project-buttons {
-        flex-direction: column;
-    }
+body.dark-mode .projects h2 {
+  color: #c4b5fd;
+}
+
+
+body.dark-mode .projects-subtitle {
+  color: #ddd6fe;
+}
+
+
+body.dark-mode .project-card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+
+body.dark-mode .project-card:hover {
+  box-shadow: 0 15px 35px rgba(196,181,253,0.25);
+}
+
+
+body.dark-mode .project-content h3 {
+  color: #c4b5fd;
+}
+
+
+body.dark-mode .project-content p {
+  color: #e5e7eb;
+}
+
+
+body.dark-mode .tag {
+  background: rgba(196,181,253,0.2);
+  color: #ddd6fe;
+}
+
+
+body.dark-mode .live-btn {
+  background: #8b5cf6;
+}
+
+
+body.dark-mode .live-btn:hover {
+  background: #7c3aed;
+}
+
+
+body.dark-mode .github-btn {
+  border-color: #c4b5fd;
+  color: #c4b5fd;
+}
+
+
+body.dark-mode .github-btn:hover {
+  background: #c4b5fd;
+  color: #1e1b4b;
+}
+
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+
+@media(max-width:768px){
+
+  .projects {
+    padding: 60px 8%;
+  }
+
+  .projects h2 {
+    font-size: 2.2rem;
+  }
+
+  .projects-subtitle {
+    font-size: 1rem;
+  }
+
+  .project-image {
+    height: 200px;
+  }
+
+  .project-buttons {
+    flex-direction: column;
+  }
+
+  .project-buttons a {
+    text-align: center;
+  }
+}
+
+
+@media(max-width:480px){
+
+  .project-image {
+    height: 180px;
+  }
+
+  .project-content {
+    padding: 20px;
+  }
+
 }
