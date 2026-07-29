@@ -1,0 +1,137 @@
+/* Header */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: blueviolet;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar */
+
+.navbar {
+  max-width: 1200px;
+  margin: auto;
+  padding: 18px 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* Links */
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #222;
+  font-size: 17px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #2563eb;
+}
+
+/* Buttons */
+
+.nav-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.theme-btn,
+.menu-btn {
+  border: none;
+  background: none;
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.theme-btn:hover,
+.menu-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Hide hamburger on desktop */
+
+.menu-btn {
+  display: none;
+}
+
+/* Dark Mode */
+
+body.dark-mode {
+  background: #121212;
+  color: white;
+}
+
+body.dark-mode .site-header {
+  background: #1e1e1e;
+}
+
+body.dark-mode .nav-links a {
+  color: white;
+}
+
+body.dark-mode .logo {
+  color: #60a5fa;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    background: white;
+
+    flex-direction: column;
+    align-items: center;
+
+    gap: 25px;
+    padding: 25px 0;
+
+    transition: 0.4s ease;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  body.dark-mode .nav-links {
+    background: #1e1e1e;
+  }
+}
